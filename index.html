@@ -1,56 +1,415 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./favicon.png" type="image/x-icon">
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!--====== Title ======-->
     <title>Arena Consórcios</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-        }
-        .bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./construction.jpg');
-            height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .content {
-            text-align: center;
-            padding: 2rem;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 15px;
-            max-width: 80%;
-        }
-        h1 {
-            color: #2c3e50;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        p {
-            color: #34495e;
-            font-size: 1.2rem;
-            margin: 0.5rem 0;
-        }
-        .highlight {
-            color: #e74c3c;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <div class="bg">
-        <div class="content">
-            <h1>Site em Construção</h1>
-            <p>Estamos trabalhando para trazer algo <span class="highlight">incrível</span> para você.</p>
-            <p>Por favor, volte em breve!</p>
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--====== Favicon Icon ======-->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/png"
+    />
+
+    <!--====== CSS Files LinkUp ======-->
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/lineIcons.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+      <div class="loader">
+        <div class="spinner">
+          <div class="spinner-container">
+            <div class="spinner-rotator">
+              <div class="spinner-left">
+                <div class="spinner-circle"></div>
+              </div>
+              <div class="spinner-right">
+                <div class="spinner-circle"></div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== HEADER PART START ======-->
+    <header class="header-area">
+      <div class="navbar-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/logo/logo.svg" alt="Logo" />
+                </a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="toggler-icon"> </span>
+                  <span class="toggler-icon"> </span>
+                  <span class="toggler-icon"> </span>
+                </button>
+
+                <div
+                  class="collapse navbar-collapse sub-menu-bar"
+                  id="navbarSupportedContent"
+                >
+                  <ul id="nav" class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="page-scroll active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#about">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#facts">Porque?</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- navbar collapse -->
+              </nav>
+              <!-- navbar -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- navbar area -->
+
+      <div
+        id="home"
+        class="header-hero bg_cover"
+        style="background-image: url(assets/images/header/banner.png)"
+      >
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="header-hero-content text-center">
+                <h2
+                  class="header-title wow fadeInUp"
+                  data-wow-duration="1.3s"
+                  data-wow-delay="0.5s"
+                >
+                  Venha construir o seu futuro com a gente!
+                </h2>
+                <p
+                  class="text wow fadeInUp"
+                  data-wow-duration="1.3s"
+                  data-wow-delay="0.8s"
+                >
+                  Entre em contato conosco e saiba mais sobre nossos planos e
+                  como podemos te ajudar a realizar seus sonhos.
+                </p>
+                <a
+                  href="https://wa.me/5514997721869"
+                  class="main-btn wow fadeInUp"
+                  data-wow-duration="1.3s"
+                  data-wow-delay="1.1s"
+                  target="_blank"
+                >
+                  WhatsApp!
+                </a>
+              </div>
+              <!-- header hero content -->
+            </div>
+          </div>
+          <!-- row CAROUSEL-->
+          <!-- Carrossel -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div
+                id="carouselExampleIndicators"
+                class="carousel slide carousel-fade"
+                data-bs-ride="carousel"
+                data-bs-interval="3000" <!-- Intervalo de 3 segundos -->
+              >
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="3"
+                    aria-label="Slide 4"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="assets/images/tarraf/1.jpg"
+                      alt="Slide 1"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="assets/images/tarraf/2.jpg"
+                      alt="Slide 2"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="assets/images/tarraf/3.jpg"
+                      alt="Slide 3"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="assets/images/tarraf/4.jpg"
+                      alt="Slide 4"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- row -->
+        </div>
+        <!-- container -->
+        <div id="particles-1" class="particles"></div>
+      </div>
+      <!-- header hero -->
+    </header>
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== SERVICES PART ENDS ======-->
+
+    <section id="about">
+      <!--====== ABOUT PART START ======-->
+      <div class="about-area pt-70">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                class="about-content mt-50 wow fadeInLeftBig"
+                data-wow-duration="1s"
+                data-wow-delay="0.5s"
+              >
+                <div class="section-title">
+                  <div class="line"></div>
+                  <h3 class="title">
+                    Fácil & Rápido <span>para conseguir seu negócio</span>
+                  </h3>
+                </div>
+                <!-- section title -->
+                <p class="text" style="margin-bottom: 20px;">
+                  Se você está buscando uma maneira segura, acessível e
+                  planejada de adquirir um carro ou imóvel, o consórcio pode ser
+                  a solução perfeita para você. Diferente de outras formas de
+                  financiamento, o consórcio oferece diversas vantagens que o
+                  tornam uma excelente opção para quem quer realizar seus sonhos
+                  sem pagar juros abusivos ou enfrentar burocracias
+                  desnecessárias.
+                </p>
+                <a href="javascript:void(0)" class="btn-2">Entre em contato</a>
+              </div>
+              <!-- about content -->
+            </div>
+            <div class="col-lg-6">
+              <div
+                class="about-image text-center mt-50 wow fadeInRightBig"
+                data-wow-duration="1s"
+                data-wow-delay="0.5s"
+              >
+                <img src="assets/images/about/familia.jpeg" alt="about" />
+              </div>
+              <!-- about image -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+      </div>
+      <!--====== ABOUT PART ENDS ======-->
+    </section>
+
+    <!--====== VIDEO COUNTER PART START ======-->
+    <section id="facts" class="video-counter pt-70">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 order-lg-last">
+            <div
+              class="counter-wrapper mt-50 wow fadeIn"
+              data-wow-duration="1s"
+              data-wow-delay="0.8s"
+            >
+              <div class="counter-content">
+                <div class="section-title">
+                  <div class="line"></div>
+                  <h3 class="title">
+                    Alguns motivos <span> para ter um consórcio</span>
+                  </h3>
+                </div>
+                <!-- section title -->
+                <p class="text">
+                  <li>
+                    <strong>Sem Juros -> </strong>Diferente dos financiamentos
+                    tradicionais, no consórcio não há cobrança de juros. Você
+                    paga apenas uma taxa de administração, que costuma ser muito
+                    mais baixa do que os juros cobrados em financiamentos.
+                  </li>
+                  <br />
+                  <li>
+                    <strong>Formação de Patrimônio -> </strong> Ao optar por um
+                    consórcio, você faz um investimento seguro e gradual,
+                    ajudando na formação de um patrimônio sólido sem comprometer
+                    seu orçamento de forma agressiva.
+                  </li>
+                  <br />
+                  <li>
+                    <strong>Planejamento -> </strong> O consórcio é uma forma
+                    planejada e organizada de adquirir um bem, o que ajuda a
+                    manter o controle financeiro e a evitar dívidas
+                    desnecessárias.
+                  </li>
+                </p>
+              </div>
+              </div>
+              <!-- row -->
+            </div>
+            <!-- counter wrapper -->
+          </div>
+          <div class="container-video">
+            <div
+              class="video-content mt-50 wow fadeIn"
+              data-wow-duration="1s"
+              data-wow-delay="0.5s"
+            >
+              <img class="dots" src="assets/images/video/dots.svg" alt="dots" />
+              <div class="video-wrapper">
+                <div class="video-image">
+                  <img src="assets/images/video/video.png" alt="video" />
+                </div>
+                <div class="video-icon">
+                  <a
+                    href="./assets/images/video/tarraf.mp4"
+                    class="video-popup glightbox"
+                  >
+                    <i class="lni lni-play"> </i>
+                  </a>
+                </div>
+              </div>
+              <!-- video wrapper -->
+            </div>
+            <!-- video content -->
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </section>
+    <!--====== VIDEO COUNTER PART ENDS ======-->
+
+    <!--====== FOOTER PART START ======-->
+    <footer id="footer" class="footer-area">
+      <div class="container">
+        <!-- subscribe area -->
+        <div class="footer-widget pb-100">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-8">
+              <div
+                class="footer-about wow fadeIn"
+                data-wow-duration="1s"
+                data-wow-delay="0.2s"
+              >
+                <a class="logo" href="javascript:void(0)">
+                  <img
+                    src="assets/images/logo/logo.svg"
+                    alt="logo"
+                    style="width: 100%"
+                  />
+                </a>
+              </div>
+              <div
+                class="footer-contact wow fadeIn"
+                data-wow-duration="1s"
+                data-wow-delay="0.8s"
+                style="margin-left: 25px"
+              >
+                <div class="footer-title">
+                  <h4 class="title">Entre em contato</h4>
+                </div>
+                <ul class="contact">
+                  <li>+55 14 99772-1869</li>
+                  <li>Pederneiras - São Paulo <br /></li>
+                </ul>
+              </div>
+              <!-- footer about -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- footer widget -->
+      </div>
+      <!-- container -->
+      <div id="particles-2"></div>
+    </footer>
+    <!--====== FOOTER PART ENDS ======-->
+
+    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="back-to-top"> <i class="lni lni-chevron-up"> </i> </a>
+    <!--====== BACK TOP TOP PART ENDS ======-->
+
+    <!--====== Javascript Files ======-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+    <script src="assets/js/count-up.min.js"></script>
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
